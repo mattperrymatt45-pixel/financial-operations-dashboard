@@ -1,0 +1,251 @@
+Employee_ID,Name,Region,Department,Hire_Date
+EMP00001,Allison Hill,APAC,Trading Ops,2024-06-24
+EMP00002,Noah Rhodes,NA,Client Services,2018-09-14
+EMP00003,Angie Henderson,NA,Client Services,2022-04-26
+EMP00004,Daniel Wagner,EMEA,Settlements,2016-11-08
+EMP00005,Cristian Santos,APAC,Risk,2019-07-05
+EMP00006,Connie Lawrence,APAC,Risk,2021-10-04
+EMP00007,Abigail Shaffer,APAC,Trading Ops,2015-11-22
+EMP00008,Gina Moore,NA,Client Services,2015-09-16
+EMP00009,Gabrielle Davis,EMEA,Settlements,2024-08-26
+EMP00010,Ryan Munoz,NA,Client Services,2019-05-07
+EMP00011,Monica Herrera,APAC,Trading Ops,2020-01-11
+EMP00012,Jamie Arnold,NA,Client Services,2020-03-09
+EMP00013,Lisa Hensley,NA,Settlements,2017-11-05
+EMP00014,Michele Williams,APAC,Trading Ops,2023-06-11
+EMP00015,Dylan Miller,APAC,Client Services,2021-04-25
+EMP00016,Brian Ramirez,APAC,Trading Ops,2019-10-24
+EMP00017,Holly Wood,APAC,Trading Ops,2017-07-08
+EMP00018,Derek Zuniga,EMEA,Client Services,2023-04-16
+EMP00019,Lisa Jackson,EMEA,Client Services,2015-10-21
+EMP00020,Carla Gray,APAC,Settlements,2017-01-21
+EMP00021,Margaret Hawkins DDS,EMEA,Settlements,2020-05-20
+EMP00022,Patty Perez,APAC,Settlements,2016-10-05
+EMP00023,Ethan Adams,APAC,Trading Ops,2024-07-30
+EMP00024,Tommy Walter,APAC,Trading Ops,2018-01-20
+EMP00025,Matthew Foster,EMEA,Risk,2021-02-21
+EMP00026,Judy Baker,NA,Risk,2022-11-08
+EMP00027,Justin Baker,APAC,Risk,2016-04-22
+EMP00028,Stephanie Ross,EMEA,Risk,2015-07-08
+EMP00029,Zachary Hicks,EMEA,Trading Ops,2024-04-30
+EMP00030,Anthony Rodriguez,APAC,Settlements,2016-02-10
+EMP00031,Rebecca Henderson,EMEA,Trading Ops,2016-06-26
+EMP00032,James Ferrell,APAC,Settlements,2020-11-22
+EMP00033,Tricia Valencia,APAC,Settlements,2020-05-01
+EMP00034,Nathan Maldonado,NA,Client Services,2017-04-26
+EMP00035,Debra Davidson,NA,Settlements,2023-07-13
+EMP00036,Jeffrey Chavez,NA,Trading Ops,2019-10-29
+EMP00037,Sherri Baker,APAC,Trading Ops,2019-12-17
+EMP00038,Cassandra Gaines,APAC,Risk,2022-06-25
+EMP00039,Elizabeth Fowler,EMEA,Settlements,2018-04-12
+EMP00040,Brittany Farmer,EMEA,Trading Ops,2023-07-26
+EMP00041,Paula Moreno,APAC,Trading Ops,2017-02-16
+EMP00042,Fred Smith,EMEA,Risk,2020-10-24
+EMP00043,Sherry Decker,APAC,Trading Ops,2016-12-03
+EMP00044,Anthony Humphrey,NA,Client Services,2024-11-26
+EMP00045,Angelica Tucker,APAC,Risk,2023-02-16
+EMP00046,Philip Cannon,EMEA,Trading Ops,2024-12-12
+EMP00047,John Pierce,APAC,Trading Ops,2018-07-08
+EMP00048,Shane Henderson,EMEA,Client Services,2017-12-29
+EMP00049,Joshua Blair,EMEA,Settlements,2023-11-28
+EMP00050,Eric Carney,APAC,Settlements,2017-08-09
+EMP00051,Jessica Holmes,NA,Client Services,2022-05-05
+EMP00052,Danny Morgan,NA,Client Services,2019-10-13
+EMP00053,Crystal Robinson,NA,Client Services,2018-02-08
+EMP00054,Mark Perez,NA,Risk,2021-10-22
+EMP00055,Shannon Jones,EMEA,Settlements,2021-12-12
+EMP00056,Michael Lewis,NA,Trading Ops,2015-08-16
+EMP00057,Timothy Duncan,APAC,Risk,2022-09-20
+EMP00058,Richard Aguirre,APAC,Settlements,2020-01-04
+EMP00059,Brent Jordan,APAC,Settlements,2017-05-28
+EMP00060,John Daniel,APAC,Client Services,2019-07-29
+EMP00061,Victoria Garcia,APAC,Trading Ops,2022-08-31
+EMP00062,Gerald Hensley,APAC,Settlements,2024-11-11
+EMP00063,Connor West,NA,Trading Ops,2023-06-06
+EMP00064,Donald Wright,APAC,Settlements,2016-01-27
+EMP00065,Jessica Callahan,APAC,Trading Ops,2021-11-09
+EMP00066,Amber Kidd,EMEA,Trading Ops,2018-12-26
+EMP00067,Tracy House,APAC,Trading Ops,2018-07-15
+EMP00068,Carol Tucker,NA,Settlements,2017-11-01
+EMP00069,James Brown,APAC,Risk,2015-08-28
+EMP00070,William Baker,NA,Settlements,2018-07-24
+EMP00071,Jordan Henderson,NA,Client Services,2020-04-21
+EMP00072,Whitney Peters,APAC,Settlements,2023-02-19
+EMP00073,Brittney Phillips,APAC,Trading Ops,2022-09-16
+EMP00074,Lauren Daniels,NA,Client Services,2022-01-19
+EMP00075,Amy Silva,NA,Trading Ops,2016-08-25
+EMP00076,Sarah Moore,NA,Client Services,2018-03-07
+EMP00077,Angela Lopez,NA,Trading Ops,2017-09-19
+EMP00078,Megan Young,APAC,Client Services,2016-09-04
+EMP00079,Steve Sanchez,APAC,Trading Ops,2018-09-03
+EMP00080,Lisa Barnes,APAC,Client Services,2016-06-12
+EMP00081,Kelly Donovan,NA,Settlements,2020-08-19
+EMP00082,Mike Allen,EMEA,Client Services,2016-08-24
+EMP00083,Michael Evans,APAC,Trading Ops,2024-12-27
+EMP00084,Paul Jones,APAC,Settlements,2021-12-01
+EMP00085,Zachary Ferrell,APAC,Client Services,2021-08-30
+EMP00086,Daniel Baker,APAC,Settlements,2022-11-19
+EMP00087,Shirley Suarez,NA,Settlements,2022-08-08
+EMP00088,Christopher Bass,EMEA,Risk,2022-04-15
+EMP00089,Lisa Archer,NA,Settlements,2016-12-22
+EMP00090,Aimee Montoya,EMEA,Settlements,2015-08-20
+EMP00091,Matthew Mcmillan,APAC,Settlements,2024-11-15
+EMP00092,Brian Rodriguez,NA,Client Services,2017-01-08
+EMP00093,Denise Jacobs,NA,Trading Ops,2017-02-21
+EMP00094,Christina Walters,EMEA,Trading Ops,2016-10-31
+EMP00095,John Whitehead,NA,Client Services,2017-08-07
+EMP00096,Anna Henderson,EMEA,Client Services,2024-04-07
+EMP00097,Aaron Wise,EMEA,Settlements,2023-12-28
+EMP00098,Deborah Figueroa,EMEA,Settlements,2023-04-06
+EMP00099,Jessica Smith,APAC,Trading Ops,2021-11-28
+EMP00100,Stephen Mckee,APAC,Trading Ops,2020-05-13
+EMP00101,Sandra Aguilar,APAC,Settlements,2020-05-24
+EMP00102,Cameron Parker,EMEA,Settlements,2023-03-16
+EMP00103,Rebecca Valencia,APAC,Settlements,2024-09-03
+EMP00104,Christine Wright,EMEA,Trading Ops,2022-09-23
+EMP00105,Richard Henson,NA,Client Services,2020-01-17
+EMP00106,Marc Moore,APAC,Client Services,2022-01-15
+EMP00107,Sharon Cherry,EMEA,Risk,2019-08-06
+EMP00108,Sierra Johnson,NA,Settlements,2021-04-02
+EMP00109,Evelyn Galvan,APAC,Trading Ops,2022-12-22
+EMP00110,Sharon Cochran,APAC,Client Services,2015-04-18
+EMP00111,Richard Rodriguez,APAC,Risk,2024-09-06
+EMP00112,Shannon Walker,APAC,Trading Ops,2019-12-05
+EMP00113,Julia Torres,NA,Client Services,2017-03-25
+EMP00114,Crystal Johnson,NA,Client Services,2021-11-07
+EMP00115,Garrett Lin,EMEA,Client Services,2015-07-08
+EMP00116,Diana May,NA,Risk,2019-09-18
+EMP00117,William Herrera,NA,Settlements,2022-03-25
+EMP00118,Ashley Waller,APAC,Settlements,2020-06-11
+EMP00119,Victor Baker,NA,Client Services,2022-01-15
+EMP00120,Jeffrey Chandler,EMEA,Client Services,2023-04-08
+EMP00121,Larry Dixon,NA,Trading Ops,2023-08-07
+EMP00122,Kenneth Scott,NA,Trading Ops,2017-03-14
+EMP00123,April Frost,APAC,Settlements,2021-12-08
+EMP00124,Michelle Harmon,APAC,Client Services,2021-11-16
+EMP00125,Helen Jones,APAC,Client Services,2023-06-21
+EMP00126,Erin Edwards,EMEA,Trading Ops,2023-09-01
+EMP00127,Michelle Evans,NA,Settlements,2015-12-11
+EMP00128,Jason Powell,NA,Settlements,2022-07-19
+EMP00129,Cameron Fisher,APAC,Client Services,2015-11-06
+EMP00130,Megan Orr,EMEA,Client Services,2021-09-06
+EMP00131,Elizabeth Kelley,EMEA,Client Services,2023-01-28
+EMP00132,Dustin Jordan,APAC,Settlements,2020-12-22
+EMP00133,Mary Marshall,APAC,Settlements,2023-05-31
+EMP00134,Daniel Kennedy,APAC,Trading Ops,2017-03-26
+EMP00135,Rebecca Jackson,NA,Trading Ops,2017-01-14
+EMP00136,Jose Schultz,APAC,Client Services,2018-09-20
+EMP00137,Robert Potter,EMEA,Client Services,2016-05-20
+EMP00138,Courtney Gonzalez,NA,Client Services,2024-07-31
+EMP00139,David Alvarez,APAC,Client Services,2020-05-27
+EMP00140,Angel Perry,NA,Settlements,2015-05-27
+EMP00141,Cheyenne Horton,NA,Risk,2022-04-10
+EMP00142,David Douglas Jr.,APAC,Client Services,2016-05-10
+EMP00143,Patricia Rodriguez,EMEA,Client Services,2017-06-27
+EMP00144,Christopher Rubio,APAC,Trading Ops,2015-10-24
+EMP00145,Amber Wright,APAC,Settlements,2021-08-06
+EMP00146,Joyce Solis,APAC,Trading Ops,2022-01-04
+EMP00147,Victoria Larson,EMEA,Client Services,2016-06-18
+EMP00148,Stephanie Salazar,EMEA,Settlements,2022-03-29
+EMP00149,Kathy Rivas,APAC,Trading Ops,2019-02-20
+EMP00150,Stephanie Manning,APAC,Risk,2020-02-23
+EMP00151,David Wright,NA,Settlements,2022-05-19
+EMP00152,Pamela Boyd,APAC,Settlements,2016-08-16
+EMP00153,Denise Jones,APAC,Trading Ops,2023-10-06
+EMP00154,Devon Flores,EMEA,Risk,2021-08-22
+EMP00155,Brenda Hall,NA,Settlements,2016-11-24
+EMP00156,Michelle Brown,APAC,Risk,2018-10-19
+EMP00157,Joshua Perry,EMEA,Settlements,2018-02-05
+EMP00158,Jason Stein,NA,Client Services,2018-03-19
+EMP00159,Melissa Gates,APAC,Settlements,2018-06-18
+EMP00160,Jamie Smith,NA,Settlements,2023-06-30
+EMP00161,Paul Castaneda,APAC,Client Services,2020-07-10
+EMP00162,Jennifer Adkins,EMEA,Settlements,2021-05-29
+EMP00163,Lindsey Walker,EMEA,Trading Ops,2015-11-24
+EMP00164,Jeffrey Johnson,EMEA,Trading Ops,2020-03-10
+EMP00165,Michael Powell,APAC,Risk,2024-01-10
+EMP00166,John Anderson,NA,Settlements,2019-05-02
+EMP00167,Alyssa Long,APAC,Risk,2020-02-11
+EMP00168,Alyssa Day,APAC,Trading Ops,2017-12-19
+EMP00169,Joel Williams,APAC,Trading Ops,2020-02-15
+EMP00170,Daniel Murphy,EMEA,Trading Ops,2016-04-26
+EMP00171,Jamie Walton,EMEA,Settlements,2017-03-14
+EMP00172,Darlene Miller,APAC,Settlements,2016-02-06
+EMP00173,Joshua Cooke,EMEA,Settlements,2015-12-25
+EMP00174,Matthew Harrington,APAC,Settlements,2017-04-23
+EMP00175,Nicole Herring,EMEA,Client Services,2018-03-09
+EMP00176,Alex Hernandez,APAC,Trading Ops,2020-07-14
+EMP00177,Michael Elliott,EMEA,Settlements,2017-04-16
+EMP00178,Michael Wang,APAC,Risk,2022-03-22
+EMP00179,Lawrence Adkins,NA,Settlements,2021-04-23
+EMP00180,Robert Oconnell,APAC,Settlements,2023-08-04
+EMP00181,Alexander Collins,APAC,Client Services,2016-07-19
+EMP00182,Tina Sanders,APAC,Client Services,2017-03-24
+EMP00183,Angela Vaughn,NA,Trading Ops,2024-01-31
+EMP00184,Ashley Barton,NA,Client Services,2020-02-14
+EMP00185,Lindsay Martinez,APAC,Settlements,2018-09-09
+EMP00186,Dr. Hannah Patterson,EMEA,Trading Ops,2023-08-23
+EMP00187,Jonathan Peterson,NA,Settlements,2022-07-20
+EMP00188,Samantha Garcia,EMEA,Client Services,2018-12-16
+EMP00189,Madison Poole,EMEA,Settlements,2015-04-17
+EMP00190,Jessica Gross,APAC,Trading Ops,2022-09-02
+EMP00191,Debra Morton,APAC,Settlements,2020-05-19
+EMP00192,Karen Graham,NA,Trading Ops,2019-09-18
+EMP00193,Debra Christian,NA,Trading Ops,2017-07-04
+EMP00194,Angelica Keith,EMEA,Trading Ops,2018-05-10
+EMP00195,John Bishop,APAC,Trading Ops,2020-09-15
+EMP00196,Allen Rosales,APAC,Trading Ops,2022-05-20
+EMP00197,Daniel Salinas,NA,Trading Ops,2017-07-03
+EMP00198,Spencer Haynes,NA,Settlements,2015-06-04
+EMP00199,Adam Vaughan,NA,Trading Ops,2020-07-09
+EMP00200,Nathan Freeman,NA,Trading Ops,2021-06-19
+EMP00201,Melissa Brewer,EMEA,Client Services,2015-01-05
+EMP00202,Ricky Davis II,APAC,Settlements,2021-01-21
+EMP00203,Elizabeth Perkins,APAC,Risk,2021-09-27
+EMP00204,Joseph Coleman,NA,Trading Ops,2022-01-30
+EMP00205,Erin Warner,EMEA,Trading Ops,2015-01-26
+EMP00206,David Martinez,APAC,Trading Ops,2024-03-22
+EMP00207,Bryan Herrera,APAC,Trading Ops,2018-04-23
+EMP00208,Cathy Robinson,EMEA,Trading Ops,2024-12-20
+EMP00209,Dr. William Warren,APAC,Trading Ops,2020-07-15
+EMP00210,Brian Lee,APAC,Trading Ops,2015-10-07
+EMP00211,Christopher Smith,EMEA,Trading Ops,2015-11-25
+EMP00212,Denise Mccann,EMEA,Settlements,2018-01-11
+EMP00213,Melissa Martinez,EMEA,Trading Ops,2022-12-09
+EMP00214,Katherine Salas,APAC,Settlements,2019-04-20
+EMP00215,Julie Alexander,NA,Settlements,2017-05-28
+EMP00216,Anthony Everett,APAC,Risk,2017-01-26
+EMP00217,Rodney Morales,APAC,Trading Ops,2024-10-03
+EMP00218,Mark Brown,NA,Risk,2022-11-17
+EMP00219,Justin Torres,EMEA,Settlements,2017-09-27
+EMP00220,Bailey Duran DDS,NA,Trading Ops,2016-09-27
+EMP00221,Courtney Mills,EMEA,Client Services,2020-07-20
+EMP00222,Jeremy Dalton,EMEA,Client Services,2016-08-06
+EMP00223,Elizabeth Oliver DDS,APAC,Trading Ops,2023-11-10
+EMP00224,Theresa Clark,APAC,Trading Ops,2024-09-08
+EMP00225,Matthew Moore,APAC,Client Services,2023-04-25
+EMP00226,Benjamin Smith,APAC,Risk,2016-01-21
+EMP00227,Kirk Carter,NA,Trading Ops,2022-09-28
+EMP00228,Michael Warner,APAC,Trading Ops,2015-03-22
+EMP00229,Michael Bradshaw,NA,Settlements,2020-06-26
+EMP00230,Lori Guerrero,EMEA,Settlements,2020-11-06
+EMP00231,Jessica Stephens,NA,Settlements,2016-05-21
+EMP00232,Susan Serrano,EMEA,Settlements,2023-11-15
+EMP00233,Christopher Parker,EMEA,Settlements,2015-07-25
+EMP00234,Laura Roberts,EMEA,Risk,2015-06-11
+EMP00235,Michael Lyons,APAC,Trading Ops,2023-01-03
+EMP00236,Kathryn Snyder,NA,Trading Ops,2015-11-01
+EMP00237,Andrew Reynolds,APAC,Risk,2016-08-07
+EMP00238,David Davis,APAC,Client Services,2017-04-24
+EMP00239,Sara Johnston,EMEA,Settlements,2023-02-25
+EMP00240,Yvonne Chambers,APAC,Settlements,2015-07-07
+EMP00241,Andrew Avila,NA,Trading Ops,2019-10-27
+EMP00242,Matthew Moon,NA,Settlements,2018-02-22
+EMP00243,Kevin Walters,NA,Settlements,2016-11-16
+EMP00244,Brandon Bailey MD,APAC,Trading Ops,2018-11-14
+EMP00245,Shannon Rivera,APAC,Trading Ops,2017-05-16
+EMP00246,Donna Landry,NA,Settlements,2021-12-05
+EMP00247,Krista Gibson,EMEA,Trading Ops,2020-09-12
+EMP00248,Frank Cordova,NA,Trading Ops,2022-04-29
+EMP00249,Jose Travis,NA,Trading Ops,2022-03-29
+EMP00250,Kimberly Gutierrez,NA,Trading Ops,2019-02-18

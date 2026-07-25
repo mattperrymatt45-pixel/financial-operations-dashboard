@@ -1,0 +1,15 @@
+venv/
+.env
+__pycache__/
+*.pyc
+
+# Generated data - reproducible from the seeded generate_data.py script
+data/*.csv
+
+# Power BI can create local cache/temp files
+*.pbix.lock
+~$*.pbix
+
+# OS junk
+.DS_Store
+Thumbs.db
