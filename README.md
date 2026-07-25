@@ -1,158 +1,150 @@
-# Financial Operations KPI Dashboard — Setup & Execution Guide
+# 📊 Financial Operations KPI Dashboard
 
-Everything up through Phase 4 was built and tested inside Claude's sandboxed
-container. That sandbox resets between sessions, so to actually run and keep
-this project, set it up locally (or on a server/VM you control) following the
-steps below, in order.
+An end-to-end financial analytics platform that simulates investment bank
+back-office operations — synthetic trade data, a normalized PostgreSQL
+warehouse, a Python ETL pipeline, and interactive Power BI dashboards covering
+settlement performance, revenue, risk, and operational SLAs.
+
+![Python](https://img.shields.io/badge/Python-3.10+-3776AB?logo=python&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-4169E1?logo=postgresql&logoColor=white)
+![Power BI](https://img.shields.io/badge/Power%20BI-Dashboards-F2C811?logo=powerbi&logoColor=black)
+![Pandas](https://img.shields.io/badge/Pandas-ETL-150458?logo=pandas&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-green)
 
 ---
 
-## 0. Prerequisites (install once)
+## Overview
 
-| Tool | Why | Where to get it |
-|---|---|---|
-| Python 3.10+ | data generation, ETL | python.org |
-| PostgreSQL 14+ | database | postgresql.org (or `brew install postgresql` / `apt install postgresql`) |
-| Power BI Desktop | dashboards (Phase 5) | Windows only — Microsoft Store or powerbi.microsoft.com |
-| Git | version control | git-scm.com |
+This project models the full lifecycle of trade processing at an investment
+bank — trade capture, settlement, exceptions, and profitability — across
+three regions (APAC, EMEA, NA) and five asset classes. It's built as a
+portfolio-grade data pipeline: synthetic data with realistic, correlated
+business rules → relational storage → SQL analytics → automated KPI
+computation → BI-ready dashboards.
 
-Python packages (install into a virtual environment):
-```bash
-python3 -m venv venv
-source venv/bin/activate        # Windows: venv\Scripts\activate
-pip install pandas numpy faker sqlalchemy psycopg2-binary
+### Architecture
+
+```mermaid
+flowchart LR
+    A[Synthetic Data Generator<br/>Python + Faker] -->|CSV| B[(PostgreSQL<br/>normalized schema)]
+    B --> C[SQL Analytics Views<br/>settlement rate, SLA, revenue]
+    C --> D[Python ETL Pipeline<br/>Pandas + SQLAlchemy]
+    D -->|Daily / Monthly / Region KPI tables| B
+    B --> E[Power BI Dashboards<br/>Executive · Regional · Counterparty · Ops · Forecast]
 ```
 
 ---
 
-## 1. Project structure
+## Features
 
-Unzip the deliverable into a working folder:
+- **300,000+ synthetic transactions** generated with realistic correlations:
+  large trades take longer to process, new/high-risk counterparties fail
+  settlement more often, failures spike around holidays, and failed trades
+  cost more to resolve.
+- **Normalized PostgreSQL schema** (Calendar, Employees, Counterparties,
+  Transactions) with foreign keys and indexes tuned for the analytics layer.
+- **8 SQL analytics views** covering daily volume, settlement success rate,
+  failure breakdowns, revenue trends, top counterparties, SLA adherence,
+  operational cost, and employee productivity.
+- **Automated ETL pipeline** that dedupes, standardizes currency to USD, and
+  computes Profit / Settlement Delay / Failure Rate into three KPI tables.
+- **5 Power BI dashboards** — Executive, Regional, Counterparty, Operations,
+  and Forecast — with drill-downs, cross-filtering, and time-series
+  forecasting.
+
+---
+
+## Tech Stack
+
+| Layer | Tools |
+|---|---|
+| Data generation | Python, Pandas, NumPy, Faker |
+| Database | PostgreSQL |
+| ETL | Python, SQLAlchemy, psycopg2 |
+| Analytics | SQL views |
+| Visualization | Power BI (DAX, forecasting) |
+| *(planned)* AI Assistant | Streamlit, OpenAI/Gemini API |
+| *(planned)* Automation | Cron / Task Scheduler / Airflow |
+
+---
+
+## Dashboards
+
+> Screenshots go here — export each Power BI page as an image
+> (`File → Export → Export to Image` or a screenshot) and drop them into a
+> `dashboard/screenshots/` folder, then reference them like:
+> `![Executive Dashboard](dashboard/screenshots/executive.png)`
+
+| Dashboard | Key Metrics |
+|---|---|
+| Executive | Total Transactions, Revenue, Settlement Success %, SLA % |
+| Regional | Revenue by Region, Volume Trends, Failure Rate |
+| Counterparty | Revenue Contribution, Failure Rate, Risk Profile |
+| Operations | Employee Productivity, Exception Types, Op Cost |
+| Forecast | Revenue, Volume, and Failure Rate projections |
+
+---
+
+## Project Structure
+
 ```text
 financial-operations-dashboard/
-├── data/
-│   ├── generate_data.py
-│   └── *.csv                (generated, not committed to git - see .gitignore below)
-├── database/
-│   ├── schema.sql
-│   └── load_data.py
-├── analytics/
-│   └── views.sql
-├── etl/
-│   └── etl_pipeline.py
-├── dashboard/
-│   └── PowerBI_Build_Guide.md
+├── data/               # Phase 1: synthetic data generator + CSVs
+├── database/           # Phase 2: PostgreSQL schema + load script
+├── analytics/          # Phase 3: SQL analytics views
+├── etl/                # Phase 4: Python ETL pipeline
+├── dashboard/           # Phase 5: Power BI build guide + .pbix file
 ├── requirements.txt
-├── README.md                 (this file)
-└── .env                       (create this yourself - never commit it)
+├── SETUP.md            # full local setup + run instructions
+└── README.md            # you are here
 ```
 
 ---
 
-## 2. Where each phase executes
-
-| Phase | Runs on | Command |
-|---|---|---|
-| 1. Data generation | Your machine, terminal | `python3 data/generate_data.py` |
-| 2. Database load | Your machine, terminal (needs local Postgres running) | `python3 database/load_data.py` |
-| 3. SQL views | Your machine, via `psql` | `psql -d financial_ops -f analytics/views.sql` |
-| 4. ETL | Your machine, terminal | `python3 etl/etl_pipeline.py` |
-| 5. Power BI | Power BI Desktop app (GUI, not terminal) | Follow `dashboard/PowerBI_Build_Guide.md` |
-| 6. AI Assistant (upcoming) | Your machine, terminal | `streamlit run ai_assistant/app.py` |
-| 7. Automation (upcoming) | Task Scheduler / cron / Airflow | scheduled, not manual |
-
-Run 1 → 2 → 3 → 4 in that exact order every time you regenerate data — each
-step depends on the previous one's output.
-
----
-
-## 3. Step-by-step: getting a working local Postgres
-
-**macOS:**
-```bash
-brew install postgresql@16
-brew services start postgresql@16
-createdb financial_ops
-```
-
-**Windows:** install via the EDB installer (postgresql.org/download/windows),
-then use pgAdmin or `psql` (installed alongside) to run `CREATE DATABASE financial_ops;`.
-
-**Linux (Ubuntu/Debian):**
-```bash
-sudo apt update && sudo apt install postgresql postgresql-contrib
-sudo service postgresql start
-sudo -u postgres psql -c "ALTER USER postgres PASSWORD 'postgres';"
-sudo -u postgres createdb financial_ops
-```
-
-Then update the connection strings in `database/load_data.py` and
-`etl/etl_pipeline.py` if your username/password/host differ from the defaults
-(`postgres` / `postgres` / `localhost:5432`).
-
----
-
-## 4. Full run, start to finish
+## Quick Start
 
 ```bash
+git clone https://github.com/<your-username>/financial-operations-dashboard.git
 cd financial-operations-dashboard
+python -m venv venv && venv\Scripts\activate     # Windows
+pip install -r requirements.txt
 
-# Phase 1: generate synthetic data (writes CSVs into data/)
-python3 data/generate_data.py
-
-# Phase 2: create schema + load CSVs into Postgres
-python3 database/load_data.py
-
-# Phase 3: create analytics views
-psql -d financial_ops -U postgres -f analytics/views.sql
-
-# Phase 4: run ETL, populate daily_kpi / monthly_kpi / region_kpi
-python3 etl/etl_pipeline.py
-
-# Phase 5: open Power BI Desktop, connect to financial_ops, follow the guide
+python data/generate_data.py
+python database/load_data.py
+psql -U postgres -d financial_ops -f analytics/views.sql
+python etl/etl_pipeline.py
 ```
 
-Verify at any point with:
-```bash
-psql -d financial_ops -U postgres -c "\dt"
-psql -d financial_ops -U postgres -c "SELECT * FROM region_kpi;"
-```
+Then open `dashboard/*.pbix` in Power BI Desktop.
+
+Full walkthrough, including PostgreSQL setup on Windows/macOS/Linux, is in
+[SETUP.md](SETUP.md).
 
 ---
 
-## 5. Re-running after changes
+## Business Rules Modeled
 
-If you edit `generate_data.py` (e.g. tweak volumes or business rules), you must
-re-run **all four** steps in order — the database tables get dropped/recreated
-each time (`load_data.py` uses `DROP TABLE ... CASCADE`, which also drops the
-Phase 3 views, so re-run `views.sql` after every reload).
-
----
-
-## 6. requirements.txt
-
-```text
-pandas
-numpy
-faker
-sqlalchemy
-psycopg2-binary
-streamlit          # for the upcoming AI assistant phase
-openai              # or google-generativeai, depending on which LLM you use
-```
+- Large trades → longer processing time
+- New counterparties (< 90 days onboarded) → higher settlement failure rate
+- Settlement near a holiday → increased failure probability
+- Failed trades → higher operational cost, reduced booked revenue
+- SLA breach if processing time exceeds 30 minutes
+- APAC carries the highest transaction volume, concentrated in APAC market hours
 
 ---
 
-## 7. .gitignore (create this in the project root)
+## Roadmap
 
-```text
-venv/
-.env
-data/*.csv
-__pycache__/
-*.pyc
-```
+- [x] Phase 1 — Synthetic data generation
+- [x] Phase 2 — PostgreSQL database
+- [x] Phase 3 — SQL analytics views
+- [x] Phase 4 — Python ETL pipeline
+- [x] Phase 5 — Power BI dashboards
+- [ ] Phase 6 — Streamlit AI assistant (natural-language querying via LLM)
+- [ ] Phase 7 — End-to-end automation + scheduled email reporting
 
-Don't commit the generated CSVs (they're large and reproducible from the seeded
-script) or your `.env` file (will hold DB credentials / API keys once Phase 6
-adds the LLM integration).
+---
+
+## License
+
+MIT — free to use, modify, and build on.
