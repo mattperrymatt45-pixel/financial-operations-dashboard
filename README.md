@@ -73,7 +73,7 @@ flowchart LR
 > Screenshots go here — export each Power BI page as an image
 > (`File → Export → Export to Image` or a screenshot) and drop them into a
 > `dashboard/screenshots/` folder, then reference them like:
-> `![Executive Dashboard](dashboard/screenshots/executive.png)`
+> `"C:\Users\Rihen\finance\dashboard\Screenshot 2026-07-25 215210.png"`
 
 | Dashboard | Key Metrics |
 |---|---|
