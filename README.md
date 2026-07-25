@@ -70,20 +70,26 @@ flowchart LR
 
 ## Dashboards
 
-> Screenshots go here — export each Power BI page as an image
-> (`File → Export → Export to Image` or a screenshot) and drop them into a
-> `dashboard/screenshots/` folder, then reference them like:
-> `![Executive Dashboard](dashboard/screenshots/Screenshot 2026-07-25 215210.png)`
-> `![Executive Dashboard](dashboard/screenshots/Screenshot 2026-07-25 215219.png)`
-> `![Executive Dashboard](dashboard/screenshots/Screenshot 2026-07-25 215229.png)`
+### Executive Overview
+KPI scorecards (Revenue, Profit, Transactions, Failure Rate, SLA Adherence), monthly revenue/profit trends, and revenue/profit split by region.
 
-| Dashboard | Key Metrics |
-|---|---|
-| Executive | Total Transactions, Revenue, Settlement Success %, SLA % |
-| Regional | Revenue by Region, Volume Trends, Failure Rate |
-| Counterparty | Revenue Contribution, Failure Rate, Risk Profile |
-| Operations | Employee Productivity, Exception Types, Op Cost |
-| Forecast | Revenue, Volume, and Failure Rate projections |
+![Executive Dashboard](dashboard/screenshots/executive.png)
+
+### Regional Operations
+Daily transaction volume and settlement success trends, failed trades by region, SLA adherence by region, and operational cost by region.
+
+![Regional Operations Dashboard](dashboard/screenshots/regional-operations.png)
+
+### Counterparty & Employee Performance
+Top counterparties by revenue, failure rate by counterparty, employee productivity (trades handled, SLA adherence, average processing time).
+
+![Counterparty & Employee Dashboard](dashboard/screenshots/counterparty-employee.png)
+
+> **Note:** a couple of visuals above (SLA Adherence by Region, Settlement Success Rate trend) are currently
+> summing a pre-aggregated percentage column across many rows instead of using a volume-weighted average,
+> which inflates the numbers. See `dashboard/PowerBI_Build_Guide.md` Section 3 for the correct DAX measures
+> (`SLA Adherence %`, `Settlement Success %`) — swap the field wells from the raw column to these measures
+> to fix it.
 
 ---
 
