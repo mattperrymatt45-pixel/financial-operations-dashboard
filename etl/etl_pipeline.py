@@ -11,7 +11,7 @@ Load     : write Daily_KPI, Monthly_KPI, Region_KPI tables back to PostgreSQL
 import pandas as pd
 from sqlalchemy import create_engine
 
-DB_URI = "postgresql+psycopg2://postgres:Rlmmlk%40810@localhost:5432/financial_ops"
+DB_URI = "postgresql+psycopg2://postgres:postgres@localhost:5432/financial_ops"
 
 # Static FX-to-USD rates (synthetic project - approximate, fixed rates are fine here)
 FX_TO_USD = {

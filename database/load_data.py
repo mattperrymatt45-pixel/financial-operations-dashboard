@@ -15,7 +15,7 @@ DB_CONFIG = dict(
     port=5432,
     dbname="financial_ops",
     user="postgres",
-    password="Rlmmlk%40810",
+    password="postgres",
 )
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))

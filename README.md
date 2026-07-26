@@ -51,6 +51,13 @@ flowchart LR
 - **5 Power BI dashboards** — Executive, Regional, Counterparty, Operations,
   and Forecast — with drill-downs, cross-filtering, and time-series
   forecasting.
+- **Streamlit AI assistant** — ask questions in plain English ("Which
+  counterparty caused the most failures?"), get LLM-generated SQL, live
+  query results, and a natural-language business summary — locked to a
+  read-only database role so it can never write or delete data.
+- **Automated pipeline** — one script re-runs the ETL, triggers a Power BI
+  dataset refresh, generates an AI summary of the latest KPIs, and emails
+  the report, schedulable via Windows Task Scheduler, cron, or Airflow.
 
 ---
 
@@ -63,8 +70,8 @@ flowchart LR
 | ETL | Python, SQLAlchemy, psycopg2 |
 | Analytics | SQL views |
 | Visualization | Power BI (DAX, forecasting) |
-| *(planned)* AI Assistant | Streamlit, OpenAI/Gemini API |
-| *(planned)* Automation | Cron / Task Scheduler / Airflow |
+| AI Assistant | Streamlit, OpenAI API |
+| Automation | Python, Windows Task Scheduler / cron / Airflow, SMTP |
 
 ---
 
@@ -101,8 +108,13 @@ financial-operations-dashboard/
 ├── database/           # Phase 2: PostgreSQL schema + load script
 ├── analytics/          # Phase 3: SQL analytics views
 ├── etl/                # Phase 4: Python ETL pipeline
-├── dashboard/           # Phase 5: Power BI build guide + .pbix file
+├── dashboard/           # Phase 5: Power BI build guide, .pbix, screenshots
+├── common/              # shared DB + LLM helpers (used by ai_assistant & automation)
+├── ai_assistant/        # Phase 6: Streamlit AI assistant
+├── automation/          # Phase 7: pipeline orchestration + scheduling docs
+├── reports/             # pipeline logs land here
 ├── requirements.txt
+├── .env.example
 ├── SETUP.md            # full local setup + run instructions
 └── README.md            # you are here
 ```
@@ -124,6 +136,12 @@ python etl/etl_pipeline.py
 ```
 
 Then open `dashboard/*.pbix` in Power BI Desktop.
+
+Launch the AI assistant (needs `OPENAI_API_KEY` in `.env` first):
+```bash
+psql -U postgres -d financial_ops -f ai_assistant/setup_readonly_role.sql
+streamlit run ai_assistant/app.py
+```
 
 Full walkthrough, including PostgreSQL setup on Windows/macOS/Linux, is in
 [SETUP.md](SETUP.md).
@@ -148,8 +166,8 @@ Full walkthrough, including PostgreSQL setup on Windows/macOS/Linux, is in
 - [x] Phase 3 — SQL analytics views
 - [x] Phase 4 — Python ETL pipeline
 - [x] Phase 5 — Power BI dashboards
-- [ ] Phase 6 — Streamlit AI assistant (natural-language querying via LLM)
-- [ ] Phase 7 — End-to-end automation + scheduled email reporting
+- [x] Phase 6 — Streamlit AI assistant (natural-language querying via LLM)
+- [x] Phase 7 — End-to-end automation + scheduled email reporting
 
 ---
 
