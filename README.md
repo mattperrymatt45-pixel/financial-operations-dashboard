@@ -5,11 +5,14 @@ back-office operations — synthetic trade data, a normalized PostgreSQL
 warehouse, a Python ETL pipeline, and interactive Power BI dashboards covering
 settlement performance, revenue, risk, and operational SLAs.
 
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Streamlit-FF4B4B?logo=streamlit&logoColor=white)](https://mattperrymatt45-pixel-financial-operatio-ai-assistantapp-hjzhgg.streamlit.app/)
 ![Python](https://img.shields.io/badge/Python-3.10+-3776AB?logo=python&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-4169E1?logo=postgresql&logoColor=white)
 ![Power BI](https://img.shields.io/badge/Power%20BI-Dashboards-F2C811?logo=powerbi&logoColor=black)
 ![Pandas](https://img.shields.io/badge/Pandas-ETL-150458?logo=pandas&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-green)
+
+**🔗 [Try the live AI Assistant](https://mattperrymatt45-pixel-financial-operatio-ai-assistantapp-hjzhgg.streamlit.app/)** — ask financial-ops questions in plain English and get live SQL-backed answers.
 
 ---
 
@@ -56,8 +59,10 @@ flowchart LR
   query results, and a natural-language business summary — locked to a
   read-only database role so it can never write or delete data.
 - **Automated pipeline** — one script re-runs the ETL, triggers a Power BI
-  dataset refresh, generates an AI summary of the latest KPIs, and emails
-  the report, schedulable via Windows Task Scheduler, cron, or Airflow.
+  dataset refresh, and generates an AI summary of the latest KPIs,
+  schedulable via Windows Task Scheduler, cron, or Airflow. *(Scheduled
+  email delivery of the report is planned but not yet implemented — see
+  Roadmap.)*
 
 ---
 
@@ -124,7 +129,7 @@ financial-operations-dashboard/
 ## Quick Start
 
 ```bash
-git clone https://github.com/<your-username>/financial-operations-dashboard.git
+git clone https://github.com/mattperrymatt45-pixel/financial-operations-dashboard.git
 cd financial-operations-dashboard
 python -m venv venv && venv\Scripts\activate     # Windows
 pip install -r requirements.txt
@@ -167,7 +172,8 @@ Full walkthrough, including PostgreSQL setup on Windows/macOS/Linux, is in
 - [x] Phase 4 — Python ETL pipeline
 - [x] Phase 5 — Power BI dashboards
 - [x] Phase 6 — Streamlit AI assistant (natural-language querying via LLM)
-- [x] Phase 7 — End-to-end automation + scheduled email reporting
+- [x] Phase 7 — End-to-end pipeline automation (ETL → Power BI refresh → AI summary)
+- [ ] Phase 8 — Scheduled email reporting
 
 ---
 
