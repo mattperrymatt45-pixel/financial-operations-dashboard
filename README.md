@@ -34,6 +34,8 @@ flowchart LR
     C --> D[Python ETL Pipeline<br/>Pandas + SQLAlchemy]
     D -->|Daily / Monthly / Region KPI tables| B
     B --> E[Power BI Dashboards<br/>Executive · Regional · Counterparty · Ops · Forecast]
+    B -->|read-only role| F[Streamlit AI Assistant<br/>LLM → SQL → results]
+    F --> G[Streamlit Community Cloud<br/>Live Deployment]
 ```
 
 ---
