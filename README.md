@@ -164,16 +164,6 @@ Full walkthrough, including PostgreSQL setup on Windows/macOS/Linux, is in
 
 ---
 
-## Roadmap
-
-- [x] Phase 1 — Synthetic data generation
-- [x] Phase 2 — PostgreSQL database
-- [x] Phase 3 — SQL analytics views
-- [x] Phase 4 — Python ETL pipeline
-- [x] Phase 5 — Power BI dashboards
-- [x] Phase 6 — Streamlit AI assistant (natural-language querying via LLM)
-- [x] Phase 7 — End-to-end pipeline automation (ETL → Power BI refresh → AI summary)
-- [ ] Phase 8 — Scheduled email reporting
 
 ---
 
